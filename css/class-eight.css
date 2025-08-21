@@ -1,0 +1,99 @@
+div.bradius{
+    width: 100px;
+    height: 100px;
+    background: url(https://assets.vogue.in/photos/5d288836e2f0130008fa5d30/1:1/w_1080,h_1080,c_limit/model%20nidhi%20sunil.jpg);
+    background-size: contain;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+/* p#bimg{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWJpwUvZMFKp_kXyJA2yd8zulrzNfK4ZIOgQ&s);
+} */
+
+
+ /* Class border image issue fixed by border-image-slice,border-image-width and border-image-repeat*/
+p#bimg{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSVVlbtrkVFoGl5n5bVyGdK28YmCVKc-zg6Q&s) 20 / 20px repeat;
+}
+
+div.Gradint{
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+    background: linear-gradient(red, green);
+    background: linear-gradient(to left, blue, aqua);
+}
+
+h1#shadows{
+    text-shadow: 4px 4px 5px red;
+}
+
+div.trans{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 1s;
+}
+div.trans:hover{
+    width: 300px;
+}
+
+div.anime{
+    width: 100px;
+    height: 100px;
+    background: dodgerblue;
+    animation-name: apple;
+    animation-duration: 8s;
+}
+
+@keyframes apple{
+    from {background: red; width: 150px;}
+    to {background: green; width: 100px;}
+}
+
+div.tool{
+    position: relative;
+    display: inline-block;
+    border: 1px solid aqua;
+    background: aqua;
+}
+
+.tool .tip {
+    visibility: hidden;
+    width: 100px;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: -25px;
+    left: 65px;
+    z-index: 1;
+}
+
+.tool:hover .tip{
+    visibility: visible;
+}
+
+.page {
+    display: inline-block;
+
+}
+
+.page a {
+    color: blue;
+    float: left;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.page a:hover{
+    color: crimson;
+    text-decoration: underline;
+    font-size: 20px;
+}
