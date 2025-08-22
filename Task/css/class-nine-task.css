@@ -1,0 +1,82 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #262A45;
+}
+main{
+    width: 60%;
+    margin: auto;
+}
+h1,h5{
+    text-align: center;
+    color: #F8FDFF;
+    padding: 20px 10px;
+    width: 325px;
+    margin: auto;
+}
+.welcome{
+    color: #2BA2EB;
+}
+.btn{
+    text-align: center;
+}
+.btn button{
+    padding: 8px;
+    width: 120px;
+    border-radius: 4px;
+}
+.btn .btn-one{
+    color: #F8FDFF;
+    background-color: #2BA2EB;
+    border: none;
+}
+.btn .btn-two{
+    color: #2BA2EB;
+    border: 2px solid #2BA2EB;
+    background-color: transparent;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.panel{
+    width: 30%;
+    min-width: 200px;
+    margin: 80px 10px;
+    padding: 20px;
+    background-color: #F8FDFF;
+    border-radius: 2px;
+    
+}
+.panel:last-child{
+    background-color: #2BA2EB;
+    color: #F8FDFF;
+}
+img{
+    padding: 10px;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+}
+.icon-1{
+    background-color: #FFDDD2;
+}
+.icon-2{
+    background-color: #B9EBA6;
+}
+.icon-3{
+    background-color: #F8FDFF;
+}
+hr{
+    background-color: #FFDDD2;
+    height: 2px;
+    border: none;
+    width: 60px;
+    padding: 0;
+    margin: 0;
+}
+.last-hr{
+    background-color: #F8FDFF;
+}
