@@ -1,0 +1,93 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #7175D9;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.content{
+    width: 350px;
+    height: 600px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 6px 8px 20px #140F45;
+}
+.profile-img{
+    background-color: #EEEDFD;
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px 10px 0 0;
+}
+.profile-img img{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border: 2px solid #140F45;
+    border-radius: 50%;
+    padding: 5px;
+}
+.profile-cont{
+    background-color: #2A2760;
+    height: 55%;
+    border-radius: 0 0 10px 10px;
+}
+h2{
+    color: #FFFFFB;
+    margin-top: 0;
+    padding: 10px 20px;
+    text-align: center;
+}
+p{
+    color: #FFFFFB;
+    text-align: center;
+
+}
+.fa-solid{
+    margin: 0 10px;
+}
+.btn{
+    text-align: center;
+}
+button{
+    background-color: #140F45;
+    color: #FFFFFB;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 8px;
+    width: 100px;
+    border: none;
+    box-shadow: 5px 10px 10px #140F45;
+}
+hr{
+    margin: 20px;
+    border: 3px solid #140F45;
+    border-bottom: none;
+}
+h3{
+    color: #FFFFFB;
+    padding: 0 20px;
+    margin: 0;
+}
+ul{
+    display: flex;
+    width: 98%;
+    padding: 0 10px;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul li{
+    list-style: none;
+    padding: 10px;
+    color: #FFFFFB;
+}
