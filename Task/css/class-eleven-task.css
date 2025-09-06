@@ -395,86 +395,7 @@ b{
 /*=============================================
 =                    Media                    =
 =============================================*/
-/* @media only screen and (min-width:768px) {
-    .head{
-        width: 96%;
-        flex-direction: column;
-        height: auto;
-    }
-    .logo,.nab_bar{
-        width: 100%;
-        font-size: 20px;
-        text-align: center; 
-        padding: 20px 10px;
-    }
-    .nab_bar ul{
-        flex-direction: column;
-        margin: auto;
-        width: 100%;
-        text-align: center;
-        gap: 5px;
-    }
-    .nab_bar ul li{
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 10px;
-    }
-    .hero_container{
-        width: 96%;
-    }
-    .hero_cont{
-        width: 55%;
-    }
-    .hero_img{
-        width: 45%;
-    }
-    .hero_cont ul li{
-        font-size: 30px;
 
-    }
-    .hero_cont h3{
-        font-size: 16px;
-    }
-    .hero_cont button{
-        width: 70%;
-        font-size: 14px;
-    }
-    .clients ul li{
-        width: 30%;
-    }
-    .how_we_work h1,.open_source h1{
-        font-size: 30px;
-        width: 80%;
-    }
-    .card_container{
-        flex-direction: column;
-    }
-    .card{
-        width: 80%;
-        margin: auto;
-    }
-    big{
-        font-size: 25px;
-    }
-    b{
-        font-size: 16px;
-    }
-    .card p{
-        font-size: 14px;
-    }
-    .card_container button,.open_source button{
-        font-size: 14px;
-        width: 40%;
-    }
-
-    .team_card img{
-        width: 100%;
-    }
-    .footer_body{
-        width: 98%;
-        padding: 0;
-    }
-    
-} */
 @media only screen and (max-width: 1200px){
     .head{
         width: 95%;
@@ -618,6 +539,7 @@ b{
         padding: 0;
     }
 }
+
 
 
 /*=====  End of Media  ======*/
