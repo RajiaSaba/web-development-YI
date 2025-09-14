@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Fourteen Part-1</title>
+</head>
+<body>
+    <!-- Comparison Operators -->
+    <h2 id="demo"></h2>
+    <h2 style="color: blue;" id="demo2"></h2>
+    <h2 style="color: blueviolet;" id="demo3"></h2>
+    <h2 style="color: brown;" id="demo4"></h2>
+    <h2 style="color: burlywood;" id="demo5"></h2>
+    <h2 style="color: cadetblue;" id="demo6"></h2>
+    <h2 style="color: chartreuse;" id="demo7"></h2>
+    <h2 style="color: chocolate;" id="demo8"></h2>
+
+
+    <!-- Booleans -->
+    <h2 style="color:coral;" id="demo9"></h2>
+    
+    <!-- For-In Loops -->
+    <h2 style="color:cornflowerblue;" id="demo10"></h2>
+    
+    <!-- Do-While Loops -->
+    <button onclick="myFunction()">Click Me</button>
+    <h2 style="color: crimson;" id="demo11"></h2>
+
+    <!-- Break & Continue -->
+    <h2 style="color: cyan;" id="demo12"></h2>
+    <h2 style="color: darkblue;" id="demo13"></h2>
+
+    <!-- Functions -->
+    <h2 style="color: darkcyan;" id="demo14"></h2>
+
+    <!-- Events -->
+    <button onclick="getElementById('demo15').innerHTML=Date()">Time</button>
+    <h2 style="color: darkgoldenrod;" id="demo15"></h2>
+    <!-- 
+    Others Events
+    - Mouse Clicks
+    - Mouse Overs
+    - Mouse Out
+    - Key Down
+    - Document Load 
+    -->
+
+    <script>
+        // Comparison Operators
+        var x = 6;
+        document.getElementById("demo").innerHTML = (x==7);
+        document.getElementById("demo2").innerHTML = (x===7);
+        document.getElementById("demo3").innerHTML = (x!=7);
+        document.getElementById("demo4").innerHTML = (x!==7);
+        document.getElementById("demo5").innerHTML = (x>7);
+        document.getElementById("demo6").innerHTML = (x<7);
+        document.getElementById("demo7").innerHTML = (x>=7);
+        document.getElementById("demo8").innerHTML = (x<=7);
+
+
+        // Booleans
+        var b1 = Boolean(90);
+        var b2 = Boolean(2.86);
+        var b3 = Boolean(-10);
+        var b4 = Boolean("Hello");
+        var b5 = Boolean('false');
+        var b6 = Boolean(1+8+10.14);
+        var b7 = Boolean(0);
+        document.getElementById("demo9").innerHTML =
+        "90 is " + b1 + "<br>" +
+        "2.86 is " + b2 + "<br>" +
+        "-10 is " + b3 + "<br>" +
+        "Any (not empty) 'string' is " + b4 + "<br>" +
+        "'false' is " + b5 + "<br>" +
+        "Any expression (except zero) is " + b6 + "<br>" +
+        "0 is " + b7;
+
+
+        // For Loops
+        var count;
+        for (count = 1; count <= 10; count ++) {
+            document.write( count );
+            document.write("<br>");
+        }
+
+        // For-In Loops
+        var txt = "";
+        var person = {fname:"John", lname:"Doe", age:25};
+        var x;
+        for (x in person) {
+            txt += person[x] + " ";
+        }
+        document.getElementById("demo10").innerHTML = txt;
+
+        document.write("<br />");
+        // While Loops
+        var i = 0;
+        while (i <20) {
+            document.write( i );
+            document.write("<br />");
+            i++;
+        }
+
+        // Do-While Loops
+        function myFunction() {
+            var j = 0;
+            var text = "";
+            do {
+                text +=j + "<br>";
+                j++;
+            }
+            while (j < 10)
+            document.getElementById("demo11").innerHTML = text;
+        }
+
+        document.write("<br />");
+        // Break & Continue
+        var k;
+        var text2 = "";
+        for(k =0; k < 10; k++){
+            if(k === 3) { break; }
+            text2 += k + "<br>";
+        }
+        document.getElementById("demo12").innerHTML = text2;
+
+        document.write("<br />");
+        var l;
+        var text3 = "";
+        for(l =0; l < 10; l++){
+            if(l === 3) { continue; }
+            text3 += l + "<br>";
+        }
+        document.getElementById("demo13").innerHTML = text3;
+
+
+        // Functions
+        function myfunction(a, b){
+            return a*b;
+        }
+        document.getElementById("demo14").innerHTML = myfunction(4, 3);
+            
+    </script>
+
+</body>
+</html>

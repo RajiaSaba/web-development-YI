@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Thirteen Part-1</title>
+</head>
+<body>
+    <!-- Topic 1 -->
+    <h1 id="demo1"></h1>
+
+    <!-- Topic 2 -->
+    <h1 style="color: palevioletred;" id="demo2"></h1>
+    
+    <!-- Topic 3 -->
+    <h1 style="color: blue;" id="demo3"></h1>
+    
+    <!-- Topic 4 -->
+    <h1 style="color: crimson;" id="demo4"></h1>
+
+    <!-- Topic 5 -->
+    <h1 style="color: rebeccapurple;" id="demo5"></h1>
+
+    <!-- Topic 6 -->
+    <h1 style="color: navajowhite;" id="demo6"></h1>
+   
+    <!-- Topic 7 -->
+    <h1 style="color: coral;" id="demo7"></h1>
+
+    <!-- Topic 8 -->
+    <h1 style="color: saddlebrown;" id="demo8"></h1>
+
+    <!-- Topic 9 -->
+    <h1 style="color: purple;" id="demo9"></h1>
+   
+    <!-- Topic 10 -->
+    <h1 style="color: aqua;" id="demo10"></h1>
+
+    <!-- Topic 11 -->
+    <h1 style="color: blueviolet;" id="demo11"></h1>
+
+    <!-- Topic 12 -->
+    <h1 style="color: chartreuse;" id="demo12"></h1>
+    
+    <!-- Topic 13 -->
+    <h1 style="color: salmon;" id="demo13"></h1>
+    
+    <!-- Topic 14 -->
+    <h1 style="color: magenta;" id="demo14"></h1>
+    
+    <!-- Topic 15 -->
+    <h1 style="color: peru;" id="demo15"></h1>
+    
+    <!-- Topic 16 -->
+    <h1 style="color: orchid;" id="demo16"></h1>
+    
+    <!-- Topic 17 -->
+    <h1 style="color: indianred;" id="demo17"></h1>
+    
+    <!-- Topic 18 -->
+    <h1 style="color: royalblue;" id="demo18"></h1>
+    
+    <!-- Topic 19 -->
+    <h1 style="color: yellowgreen;" id="demo19"></h1>
+    
+    <!-- Topic 20 -->
+    <h1 style="color: tomato;" id="demo20"></h1>
+    
+    <!-- Topic 21 -->
+    <h1 style="color: teal;" id="demo21"></h1>
+    
+    <!-- Topic 22 -->
+    <h1 style="color: indigo;" id="demo22"></h1>
+    
+    <!-- Topic 23 -->
+    <h1 style="color: chartreuse;" id="demo23"></h1>
+
+
+    <script type="text/javascript">
+        // Topic 1 js
+        var car = {
+            name: "BMW",
+            model: "X5",
+            year: 2020,
+            color: "Black"
+        };
+        
+        document.getElementById("demo1").innerHTML = car.name;
+        
+        // Topic 2 js
+        var person = {
+            fname: "John",
+            lname: "Smith",
+            age: 60,
+            eyeColor: "blue"
+        };
+        
+        document.getElementById("demo2").innerHTML = person.fname + " is " + person.age + "years old.";
+        document.getElementById("demo2").innerHTML = person.lname + " has " + person.eyeColor + " eyes.";
+        
+        // Topic 3 js
+        var studentName1 = "John Smith";
+        var studentName2 = "Roy Martin";
+        
+        document.getElementById("demo3").innerHTML = studentName1 + " <br/> " + studentName2;
+        
+        // Topic 4 js
+        var line1 = "It's about time.";
+        var line2 = 'He is called "Johnny".';
+        var line3 = "He is called 'Johnny'.";
+        
+        document.getElementById("demo4").innerHTML = line1 + " <br/> " + line2 + " <br/> " + line3;
+    
+        // Topic 5 js
+        var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        
+        document.getElementById("demo5").innerHTML = txt.length;
+        
+        // Topic 6 js
+        var y = "We are the best \"players\" in the world"; //Backslash Escape Character
+        
+        document.getElementById("demo6").innerHTML = y;
+        
+        // Topic 7 js
+        document.getElementById("demo7").innerHTML = Math.random(); //It's show number between 0-1
+
+        // Topic 8 js
+        document.getElementById("demo8").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+        
+        // Topic 9 js
+        document.getElementById("demo9").innerHTML = Math.max(0, 150, 30, 20, -8, -200);
+        
+        // Topic 10 js
+        document.getElementById("demo10").innerHTML = "The round of 4.6 is: " + Math.round(4.6);
+
+        // Topic 11 js
+        document.getElementById("demo11").innerHTML = "The floor of 4.6 is: " + Math.floor(4.6);
+        
+        // Topic 12 js
+        document.getElementById("demo12").innerHTML = "The ceil of 4.6 is: " + Math.ceil(4.6);
+        
+        // Topic 13 js (Array)
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("demo13").innerHTML = fruits[0];
+        // Topic 14 js (Array)
+        document.getElementById("demo14").innerHTML = fruits.toString();
+        
+        // Topic 15 js (Array)
+        document.getElementById("demo15").innerHTML = fruits.join(' @ ');
+        
+        // Topic 16 js (Array)
+        fruits.pop();
+        document.getElementById("demo16").innerHTML = fruits.toString(); // Remove the last element
+       
+        // Topic 17 js (Array)
+        fruits.shift();
+        document.getElementById("demo17").innerHTML = fruits.toString(); // Remove the first element
+        
+        // Topic 18 js (Array)
+        fruits.push('Jackfruit');
+        document.getElementById("demo18").innerHTML = fruits.toString(); // Add the last element
+        
+        // Topic 19 js (Array)
+        fruits.unshift('Pear');
+        document.getElementById("demo19").innerHTML = fruits.toString(); // Add the first element
+        
+        // Topic 20 js (Array)
+        fruits[0] = "Kiwi";
+        //delete fruits[0]; // It's delete the first element  
+        document.getElementById("demo20").innerHTML = fruits.toString(); // Replace Kiwi in the first element
+        
+        // Topic 21 js (Array)
+        fruits.splice(2,0,"Pineapple","Watermelon"); // 2 is for splice in index 2 and 0 is for index counts from 1 not 0
+        document.getElementById("demo21").innerHTML = fruits.toString();
+        
+        // Topic 22 js (Array)
+        fruits.reverse(2,0,"Pineapple","Watermelon"); 
+        document.getElementById("demo22").innerHTML = fruits.toString();
+        
+        // Topic 23 js (Array)
+        var Girls = ["Cecilie", "Lone", "Emilie"]; 
+        var Boys = ["Emil", "Tobias", "Linus"]; 
+        var Combine = Girls.concat(Boys); 
+        document.getElementById("demo23").innerHTML = Combine;
+
+    </script>
+</body>
+</html>

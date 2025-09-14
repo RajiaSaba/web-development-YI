@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Fourteen Part-3</title>
+    <style>
+        body {
+        background: #222;
+        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        }
+
+        .thaumbnails img {
+        height: 80px;
+        border: 4px solid white;
+        padding: 1px;
+        margin: 0 10px 10px 0;
+        }
+
+        .thaumbnails img:hover {
+        border: 4px solid red;
+        cursor: pointer;
+        }
+
+        .preview img {
+        border: 4px solid white;
+        padding: 1px;
+        width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container" align="center">
+        <h1>My Web Page Gallery</h1>
+        <br>
+
+        <div class="thaumbnails">
+            <img onmouseover="preview.src=img1.src" src="./img/img1.jpg" alt="Nature" title="Nature" name="img1">
+            <img onmouseover="preview.src=img2.src" src="./img/img2.jpg" alt="Animals" title="Animals" name="img2">
+            <img onmouseover="preview.src=img3.src" src="./img/img3.jpg" alt="Architecture" title="Architecture" name="img3">
+            <img onmouseover="preview.src=img4.src" src="./img/img4.jpg" alt="Tech" title="Tech" name="img4">
+            <img onmouseover="preview.src=img5.src" src="./img/img5.jpg" alt="People" title="People" name="img5">
+        </div>
+        <br>
+
+        <div class="preview" align="center">
+            <img name="preview" src="./img/img1.jpg" alt="Preview">
+        </div>
+    </div>
+
+</body>
+</html>
