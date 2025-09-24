@@ -1,0 +1,79 @@
+/*
+====================================================================================================================================================================
+                                                    Start Global Properties
+====================================================================================================================================================================
+*/
+*{
+    box-sizing: border-box;
+}
+ header{
+    background-color: #172035;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+
+ }
+ header img{
+    padding: 20px;
+    width: 250px;
+    height: 80px;
+ }
+ nav{
+   width: 70%;
+   display: flex;
+   justify-content: flex-end;
+ }
+ header ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+ }
+ header ul li{
+    display: inline-block;
+    list-style: none;
+ }
+ header ul li a{
+    color: #FFF;
+    text-decoration: none;
+    padding: 30px 20px;
+    display: inline-block;
+    font-size: 16px;
+ }
+ header ul li a:hover{
+    background-color: #09568D;
+    border-radius: 2px;
+    padding: 30px 20px;
+ }
+
+
+  footer{
+    background-color: #172035;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    padding: 10px;
+ }
+ footer img{
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+ }
+ footer p{
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+ }
+
+/*
+====================================================================================================================================================================
+                                                    End Global Properties
+====================================================================================================================================================================
+*/
