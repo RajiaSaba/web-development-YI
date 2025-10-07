@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character and Word Counter</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 4px 4px 16px rgb(231, 195, 162);
+        }
+        textarea{
+            width: 100%;
+            height: 300px;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            border: 2px solid sandybrown;
+            background-color: rgba(244, 164, 96,0.1);
+            font-size: 30px;
+            font-weight: 700;
+        }
+        h2{
+            display: inline-block;
+            width: 46%;
+            padding: 20px 5px;
+            margin: 20px 10px;
+            border-radius: 20px;
+            border: 0;
+            background-color: rgb(243, 219, 199);
+            font-weight: 700;
+            text-align: center;
+            border: 2px solid sandybrown;
+        }
+    </style>
+</head>
+
+<body>
+     <center>
+        <h1>Character and Word Counter</h1>
+        <textarea id="txt" oninput="myFunction()" placeholder="Type something"></textarea><br>
+        <h2 id="character">Letter : 0</h2>
+        <h2 id="word">Word : 0</h2>
+    </center>
+
+    <script>
+        function myFunction(){
+            let textInput = document.getElementById("txt");
+            let text = textInput.value;
+            let lettr = text.length
+            let txttrim = text.trim();
+            let word;
+            
+            if(txttrim === ""){
+                word = 0;
+            }
+            else{
+                var wrd = txttrim.split(/\s/).filter(Boolean);
+                word = wrd.length;
+            }
+
+            document.getElementById("character").innerHTML = "Letter : " + lettr;
+            document.getElementById("word").innerHTML = "Word : " + word;
+        }
+    </script>
+</body>
+</html>

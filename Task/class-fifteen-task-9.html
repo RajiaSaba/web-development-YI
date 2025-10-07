@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 600px;
+            height: 450px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 3px 3px 10px rebeccapurple,8px 8px 15px rosybrown;
+        }
+        h1{
+            font-size: 45px;
+            color: green;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+        div{
+            width: 80%;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            border: 0;
+            color: red;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+         button{
+            width: 50%;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 25px;
+            margin: 20px 0;
+            background-color: rebeccapurple;
+            border: 2px solid white;
+            color: white;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: rosybrown;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Simple Quiz</h1>
+        <h2 id="qstn"></h2>
+        <div id="optn"></div>
+        <button onclick="myFunction()">Submit Answer</button>
+    </center>
+
+    <script>
+            var arrOb =[
+            {
+                question: "What does HTML stand for?",
+                options: ["Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language", "High Tech Modern Language"],
+                correctAnswer: "Hyper Text Markup Language"
+
+            },
+            {
+                question: "Which property is used to change the background color in CSS?",
+                options: ["color", "bgcolor", "background-color", "background"],
+                correctAnswer: "background-color"
+            },
+            {
+                question: "Which JavaScript keyword is used to declare a variable?",
+                options: ["var", "let", "const", "all of the above"],
+                correctAnswer: "all of the above"
+            },
+            {
+                question: "How do you call a function named 'myFunction'?",
+                options: ["call function myFunction()", "myFunction()", "call myFunction()", "execute myFunction"],
+                correctAnswer: "myFunction()"
+            }
+        ];
+            
+    </script>
+    <!-- 
+    Simple Quiz
+    This project introduces a more complex data structure (an array of objects) and requires more sophisticated state management (tracking score and current question).
+   
+    ●Project Goal: Develop a short multiple-choice quiz that evaluates the user's answers and displays their final score.
+    
+    ●Concepts Covered:
+    1.Arrays of Objects: To store quiz data (question, choices, correct answer).
+    2.Loops: To display the questions and choices.
+    3.Conditional Logic: To check if the selected answer is correct.
+    4.Variables: To track the user's score and the current question number.
+    
+    ●Requirements:
+    1.Create an HTML file to display one question and multiple-choice answers (using radio buttons). Include a "Submit Answer" button.
+    2.In JavaScript, store quiz data for at least 3 questions in an array of objects.
+    3.Write functions to display a question and to check the selected answer.
+    4.Keep track of the user's score and the current question number in variables.
+    5.When the quiz is over, hide the quiz and display the final score.
+ -->
+</body>
+</html>

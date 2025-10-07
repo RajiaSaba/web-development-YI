@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic To-Do List</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 600px;
+            height: 650px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 3px mediumpurple,8px 8px 12px mediumslateblue;
+        }
+        h1{
+            font-size: 45px;
+            text-decoration: underline;
+            color: slateblue;
+        }
+        div{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            width: 80%;
+            padding: 20px;
+            border: 0;
+            color: black;
+            background-color: #ddd;
+            font-weight: 700;
+        }
+        button{
+            width: 20%;
+            padding: 20px;
+            background-color: mediumslateblue;
+            border:0;
+            color: white;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: mediumpurple;
+        }
+        ul{
+            width: 90%;
+            margin: 20px auto;
+            padding: 0;
+        }
+        ul li{
+            color: black;
+            font-size: 16px;
+            text-align: left;
+            width: 100%;
+            background-color: #ddd; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            border-bottom: 2px solid #bbb;
+            list-style: none;
+        }
+        .del_btn{
+            background-color: red;
+        }
+        .del_btn:hover{
+            background-color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+     <center>
+        <h1>Basic To-Do List</h1>
+        <div>
+            <input id="task" type="text" placeholder="Enter your task">
+            <button onclick="myFunction()" id="add_btn">Add Task</button>
+        </div>
+        
+        <ul id="todo"></ul>
+    </center>
+
+    <script>
+            let arr = [];
+
+            function unorderList(){
+                let list = document.getElementById("todo");
+                list.innerHTML = '';
+
+                for (let i = 0; i < arr.length; i++) {
+
+                    const numOfList = arr[i];
+
+                     let addList = document.createElement('li');
+                     addList.textContent = numOfList;
+
+                    let delBtn = document.createElement('Button');
+                    delBtn.textContent = 'Delete';
+                    delBtn.className = 'del_btn';
+
+                    delBtn.onclick = function(){
+                        delTask(i);
+                    };
+
+                    addList.appendChild(delBtn);
+                    list.appendChild(addList);
+                }
+            }
+            function myFunction(){
+                const tasks = document.getElementById("task");
+                const tasksText = tasks.value.trim();
+
+                if(tasksText != ""){
+                    arr.push(tasksText);
+                    tasks.value = '';
+                    unorderList(); 
+                }
+            }
+
+            function delTask(idx){
+                arr.splice(idx,1);
+                unorderList(); 
+            }
+
+
+        
+        unorderList();
+    </script>
+</body>
+</html>

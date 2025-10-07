@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Image Slider</title>
+    <style>
+         *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 800px;
+            height: 500px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 5px lightcoral,8px 8px 20px coral;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        img{
+            height: 350px;
+            border-radius: 25px;
+            object-fit: contain;
+            border: 2px solid lightcoral;
+            background-color: #ddd;
+        }
+        button{
+            border-radius: 15px;
+            font-size: 50px;
+            background-color: lightcoral;
+            border: 0;
+            color: white;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <button id="pre" onclick="pre()">&triangleleft;</button>
+        <img id="result" src="" alt="">
+        <button id="nxt" onclick="nxt()">&triangleright;</button>
+    </center>
+    <script>
+        var arr = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA_7m_9vBbVqpkuEpWKSTPp6py-Lzb__UBcQ&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROHxYft1f_Ln_y_scKnh8-g5rLMmce7JKyPQ&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&s"
+        ];
+        var currentImg = 0;
+        var image = document.getElementById("result");
+
+        function showImage(){
+            image.src = arr[currentImg];
+        }
+        function nxt(){
+            currentImg++;
+            if(currentImg >= arr.length){
+                currentImg = 0;
+            }
+            showImage();
+        }
+        function pre(){
+            currentImg--;
+            if(currentImg < 0){
+                currentImg = arr.length - 1;
+            }
+            showImage();
+        }
+        showImage();
+    </script>
+</body>
+</html>

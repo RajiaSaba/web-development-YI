@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <style>
+            *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 3px darkblue,8px 8px 12px blue;
+        }
+        h1{
+            color: darkblue;
+        }
+        select,input,h2{
+            width: 80%;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            border: 0;
+            color: darkblue;
+            background-color: rgb(212, 233, 241);
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 4px 4px 6px blue;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+        button{
+            width: 50%;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 25px;
+            margin: 20px 0;
+            background-color: darkblue;
+            border: 2px solid white;
+            color: white;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Unit Converter</h1>
+        <select id="converter">
+            <option value="K_mil">Kilometer into Mile</option>
+            <option value="mil_k">Mile into Kilometer</option>
+            <option value="k_m">Kilometer into Metre</option>
+            <option value="m_k">Metre into Kilometer</option>
+            <option value="ft_in">Foot into Inch</option>
+            <option value="in_ft">Inch into Foot</option>
+            <option value="c_f">Celsius into Fahrenheit</option>
+            <option value="f_c">Fahrenheit into Celsius</option>
+        </select>
+        <input type="number" id="demo" placeholder="Enter a value">
+        <button id="btn" onclick="myFunction()">Convert</button>
+        <h2 id="result"></h2>
+    </center>
+    <script>
+        function myFunction(){
+            var con = document.getElementById("converter").value;
+            var num = document.getElementById("demo").value;
+            var result;
+            switch (con) {
+                case 'K_mil':
+                    result = num * 0.62137; 
+                    document.getElementById("result").innerHTML = "Miles : " + result.toFixed(2);
+                    break;
+
+                case 'mil_k':
+                    result = num / 0.62137; 
+                    document.getElementById("result").innerHTML = "Kilometer : " + result.toFixed(2);
+                    break;
+
+                case 'k_m':
+                    result = num * 1000; 
+                    document.getElementById("result").innerHTML = "Metre : " + result;
+                    break;
+
+                case 'm_k':
+                    result = num / 1000; 
+                    document.getElementById("result").innerHTML = "Kilometer : " + result;
+                    
+                    break;
+
+                case 'ft_in':
+                    result = num * 12; 
+                    document.getElementById("result").innerHTML = "Inch : " + result;
+                    break;
+
+                case 'in_ft':
+                    result = num / 12; 
+                    document.getElementById("result").innerHTML = "Foot : " + result;
+                    break;
+
+                case 'c_f':
+                    result = (num * 9/5) + 32; 
+                    document.getElementById("result").innerHTML = "Fahrenheit : " + result.toFixed(2) + "&deg;F";
+                    break;
+
+                case 'f_c':
+                    result = (num - 32) * 5/9; 
+                    document.getElementById("result").innerHTML = "Celsius : " + result.toFixed(2) + "&deg;C";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

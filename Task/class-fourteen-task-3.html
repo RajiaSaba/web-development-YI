@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+<style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 700px;
+            height: 600px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 6px 6px 8px palevioletred;
+        }
+        h1{
+            font-size: 45px;
+            text-shadow: 6px -6px 7px palevioletred;
+            color: black;
+        }
+        h2{
+            width: 80%;
+            height: 300px;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            border: 1px solid palevioletred;
+            color: palevioletred;
+            background-color: #eee;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            width: 50%;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 25px;
+            margin: 20px 0;
+            background-color: palevioletred;
+            color: black;
+            border: 0;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+     <center>
+        <h1>Quotes</h1>
+        <h2 id="result"></h2>
+        <button onclick="myFunction()">New Quote</button><br>
+    </center>
+
+    <script>
+        function myFunction(){
+            let quote = [
+                "'Success is not final; failure is not fatal: It is the courage to continue that counts.'<br> —Winston Churchill",
+                "'It is better to fail in originality than to succeed in imitation.'<br> —Herman Melville",
+                "'The road to success and the road to failure are almost exactly the same.'<br> —Colin R. Davis",
+                "'Success usually comes to those who are too busy to be looking for it.'<br> —Henry David Thoreau",
+                "'I never dreamed about success. I worked for it.'<br> —Estée Lauder",
+                "'Be yourself; everyone else is already taken.'<br>― Oscar Wilde",
+                "'So many books, so little time.'<br>― Frank Zappa",
+                "'A room without books is like a body without a soul.'<br>― Marcus Tullius Cicero",
+                "'You only live once, but if you do it right, once is enough.'<br>― Mae West",
+                "'In three words I can sum up everything I've learned about life: it goes on.'<br>― Robert Frost"
+            ];
+            let newQuote = Math.floor(Math.random() * quote.length);
+            let newq = quote[newQuote];
+
+            document.getElementById("result").innerHTML = newq;
+        }
+    </script>
+</body>
+</html>

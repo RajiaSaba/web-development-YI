@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 600px;
+            height: 550px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 3px darkcyan;
+        }
+        h1{
+            color: teal;
+        }
+        button{
+            width: 25%;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 60px;
+            margin: 20px 0;
+            background-color: cadetblue;
+            border: 2px solid white;
+            color: white;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: teal;
+        }
+        .contrainer{
+            padding: 20px;
+            width: 80%;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .content{
+            font-size: 20px;
+            color: darkcyan;
+            font-weight: 600;
+        }
+
+        h2{
+            width: 80%;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            border: 0;
+            color: darkcyan;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>🗿📄✂️ Rock, Paper, Scissors Game</h1>
+        <button onclick="myFunction('Rock')">🗿</button>
+        <button onclick="myFunction('Paper')">📄</button>
+        <button onclick="myFunction('Scissors')">✂</button><br>
+        <div class="contrainer" id="demo">
+            <div class="content" >User: <span id="uvalue"></span></div>
+            <div class="content" >Computer: <span id="cvalue"></span></div>
+        </div>
+        <h2 id="result"></h2>
+    </center>
+
+    <script>
+        function myFunction(uvalue){
+            arr = ['Rock', 'Paper', 'Scissors'];
+            var com = Math.floor(Math.random() * 3);
+            var cvalue = arr[com];
+            var result = "";
+
+            document.getElementById("uvalue").innerHTML = uvalue;
+            document.getElementById("cvalue").innerHTML = cvalue;
+            
+            if (uvalue == cvalue){
+                result = "It's a Tie!";
+            }
+            else if (
+                (uvalue === 'Rock' && cvalue === 'Scissors') ||
+                (uvalue === 'Paper' && cvalue === 'Rock') ||
+                (uvalue === 'Scissors' && cvalue === 'Paper')
+            ){
+                result = "You Win 🎉";
+            }
+            else{
+                result = "You Lose ☹";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #ddd;
+        }
+        center{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 5px darkmagenta,8px 8px 20px darkorchid;
+        }
+        h1{
+            font-size: 45px;
+            color: darkmagenta;
+        }
+        div{
+            width: 60%;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 20px;
+            border: 0;
+            color: darkmagenta;
+            background-color: rgba(218, 112, 214, 0.3);
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 4px 4px 6px #bbb;
+        }
+        h2{
+            display: inline-block;
+            width: 45%;
+            margin: 20px 10px;
+        }
+        button{
+            width: 50%;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 25px;
+            margin: 20px 0;
+            background-color: saddlebrown;
+            border: 2px solid white;
+            color: white;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body onload="functionTime()">
+    <center>
+        <h1>⏰ Digital Clock</h1>
+        <div id="demo" >
+            <span id="demo1"></span> :
+            <span id="demo2"></span> :
+            <span id="demo3"></span>
+        </div>
+    </center>
+
+    <script>
+        function functionTime(){
+            var timeh = new Date().getHours();
+            var timem = new Date().getMinutes();
+            var times = new Date().getSeconds();
+
+            timeh = String(timeh).padStart(2,"0");
+            timem = String(timem).padStart(2,"0");
+            times = String(times).padStart(2,"0");
+
+
+        document.getElementById("demo1").innerHTML = timeh;
+        document.getElementById("demo2").innerHTML = timem;
+        document.getElementById("demo3").innerHTML = times;
+    }
+    functionTime();
+    setInterval(functionTime,1000);
+    </script>
+</body>
+</html>
